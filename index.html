@@ -1,0 +1,318 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>&nbspJavaScripts Basics&nbsp</header>
+        <ul>
+            <li><a class="nav-link" href="#What_is_JavaScript?">What is JavaScript?</a></li>
+            <li><a class="nav-link" href="#A_Hello_world!_example">A Hello world! example</a></li>
+            <li><a class="nav-link" href="#Language_Basics_Crash_Course">Language Basics Crash Course</a></li>
+            <li><a class="nav-link" href="#Supercharging_our_Website">Supercharging our Website</a></li>
+            <li><a class="nav-link" href="#Conclusion">Conclusion</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+
+        <section class="main-section">
+            <article>
+                <p>
+                JavaScript is a programming language that adds interactivity to your website. This happens in games, in the behavior of responses when buttons are pressed or with data entry on forms; with dynamic styling; with animation, etc. This article helps you get started with JavaScript and furthers your understanding of what is possible.
+                </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="What_is_JavaScript?">
+            <article>
+                <header>What is JavaScript?</header>
+                <p><strong>JavaScript</strong> is a powerful programming language that can add interactivity to a website. It was invented by <strong>Brendan Eich</strong>.</p>
+                <p><strong>JavaScript</strong> is versatile and beginner-friendly. With more experience, you'll be able to create games, animated 2D and 3D graphics, comprehensive database-driven apps, and much more!</p>
+                <p><strong>JavaScript</strong> itself is relatively compact, yet very flexible. Developers have written a variety of tools on top of the core JavaScript language, unlocking a vast amount of functionality with minimum effort. These include:</p>
+                <ul>
+                    <li>
+                        Browser Application Programming Interfaces (APIs) built into web browsers, providing functionality such as dynamically creating HTML and setting CSS styles; collecting and manipulating a video stream from a user's webcam, or generating 3D graphics and audio samples.</li>
+                    <li>Third-party APIs that allow developers to incorporate functionality in sites from other content providers, such as Twitter or Facebook.</li>
+                    <li>Third-party frameworks and libraries that you can apply to HTML to accelerate the work of building sites and applications.</li>
+                </ul>       
+                <p>It's outside the scope of this article—as a light introduction to JavaScript—to present the details of how the core JavaScript language is different from the tools listed above. You can learn more in MDN's JavaScript learning area, as well as in other parts of MDN.</p>
+                <p>The section below introduces some aspects of the core language and offers an opportunity to play with a few browser API features too. Have fun!</p>  
+            </article>
+        </section>
+
+        <section class="main-section" id="A_Hello_world!_example">
+            <article>
+                <header>A Hello world! example</header>
+                <p>JavaScript is one of the most popular modern web technologies! As your JavaScript skills grow, your websites will enter a new dimension of power and creativity.</p>
+                <p>However, getting comfortable with JavaScript is more challenging than getting comfortable with HTML and CSS. You may have to start small, and progress gradually. To begin, let's examine how to add JavaScript to your page for creating a Hello world! example. </p>
+                <ol>
+                    <li>Go to your test site and create a new folder named <code>scripts</code>. Within the scripts folder, create a new text document called <code>main.js</code>, and save it.</li>
+                    <li>In your <code>index.html</code> file, enter this code on a new line, just before the closing tag <code> <> </code> like this :</li>
+                    <br/>
+                    <code class="code-big">script src="scripts/main.js"</code> 
+
+                    <li>This is doing the same job as the element for CSS. It applies the JavaScript to the page, so it can have an effect on the HTML (along with the CSS, and anything else on the page).</li>
+                    <li>Add this code to the <code>main.js</code> file:</li>
+                    <br/>
+                    <code class="code-big">const myHeading = document.querySelector('h1');<br/>myHeading.textContent = 'Hello world!';</code>
+                    <li>Make sure the HTML and JavaScript files are saved. Then load index.html in your browser. You should see something like <a class="hello-world" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics/hello-world.png">this.</a></li>
+                </ol>
+                <h1>What Happened?</h1>
+                <p>The heading text changed to Hello world! using JavaScript. You did this by using a function called <code>querySelector()</code> to grab a reference to your heading, and then store it in a variable called<code>myHeading</code>. This is similar to what we did using CSS selectors. When you want to do something to an element, you need to select it first. Following that, the code set the value of the <code>myHeading</code> variable's <code>textContent</code> property (which represents the content of the heading) to <i><strong>Hello world!</strong></i>.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Language_Basics_Crash_Course">
+            <article>
+            <header>Language Basics Crash Course</header>
+            <p>To give you a better understanding of how JavaScript works, let's explain some of the core features of the language. It's worth noting that these features are common to all programming languages. If you master these fundamentals, you have a head start on coding in other languages too!</p>
+            <h1>Variables</h1>
+            <p>Variables are containers that store values. You start by declaring a variable with the <code>let </code> keyword, followed by the name you give to the variable:</p>
+            <code class="code-big">let myVariable;</code>
+            <p>A semicolon at the end of a line indicates where a statement ends. It is only required when you need to separate statements on a single line. However, some people believe it's good practice to have semicolons at the end of each statement. There are other rules for when you should and shouldn't use semicolons. You can name a variable nearly anything, but there are some restrictions.JavaScript is case sensitive. This means <code>myVariable</code> is not the same as <code>myvariable</code>. If you have problems in your code, check the case!</p>
+            <p>After declaring a variable, you can give it a value:</p>
+            <code class="code-big">myVariable = 'Bob';</code>
+            <p>Also, you can do both these operations on the same line:</p>
+            <code class="code-big">let myVariable = 'Bob';</code>
+            <p>You retrieve the value by calling the variable name:</p>
+            <code class="code-big">myVariable;</code>
+            <p>After assigning a value to a variable, you can change it later in the code:</p>
+            <code class="code-big">let myVariable = 'Bob';<br/> myVariable = 'Steve';</code>
+            <br/>
+            <p>Note that variables may hold values that have different data types:</p>
+            <div class="table">
+            <table style="width:80%">
+                <thead>
+                    <tr>
+                        <th>&nbspVariable&nbsp</th>
+                        <th>&nbspExplanation&nbsp</th>
+                        <th>&nbspExample&nbsp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>String</td>
+                        <td>This is a sequence of text known as a string. To signify that the value is a string, enclose it in single quote marks.</td>
+                        <td><code>let myVariable = 'Bob';</code></td>
+                    </tr>
+                    <tr>
+                        <td>Number</td>
+                        <td>This is a number. Numbers don't have quotes around them.</td>
+                        <td><code>let myVariable = 10;</code></td>
+                    </tr>
+                    <tr>
+                        <td>Boolean</td>
+                        <td>This is a <i>True/False</i> value. The words true and false are special keywords that don't need quote marks.</td>
+                        <td><code>let myVariable = true;</code></td>
+                    </tr>
+                    <tr>
+                        <td>Array</td>
+                        <td>This is a structure that allows you to store multiple values in a single reference.</td>
+                        <td><code>let myVariable = [1,'Bob','Steve',10];</code></td>
+                    </tr>
+                    <tr>
+                        <td>Object</td>
+                        <td>This can be anything. Everything in JavaScript is an object and can be stored in a variable. Keep this in mind as you learn.</td>
+                        <td><code id="table-code">let myVariable = document.querySelector('h1');</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>So why do we need variables? Variables are necessary to do anything interesting in programming. If values couldn't change, then you couldn't do anything dynamic, like personalize a greeting message or change an image displayed in an image gallery.</p>
+        <h1>Comments</h1>
+        <p>Comments are snippets of text that can be added along with code. The browser ignores text marked as comments. You can write comments in JavaScript just as you can in CSS:</p>
+        <code class="code-big">
+            /*<br/>
+            Everything in between is a comment.<br/>
+            */<br/>
+        </code>
+        <p>If your comment contains no line breaks, it's an option to put it behind two slashes like this:</p>
+        <code class="code-big">// This is a comment</code>
+        <h1>Operators</h1>
+        <p>An operator is a mathematical symbol that produces a result based on two values (or variables). In the following table, you can see some of the simplest operators, along with some examples to try in the JavaScript console.</p>
+        <div class="table">
+            <table style="width:80%">
+                <thead>
+                    <tr>
+                        <th>&nbspOperator&nbsp</th>
+                        <th>&nbspExplanation&nbsp</th>
+                        <th>&nbspSymbol(s)&nbsp</th>
+                        <th>&nbspExample&nbsp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Addition</td>
+                        <td>Add two numbers together or combine two strings.</td>
+                        <td class="symbol"><code>+</code></td>
+                        <td>6 + 9; 'Hello ' + 'world!';</td>
+                    </tr>
+                    <tr>
+                        <td>Subtraction, Multiplication, Division</td>
+                        <td>These do what you'd expect them to do in basic math.</td>
+                        <td class="symbol"><code>-</code>, <code>*</code>, <code>/</code></td>
+                        <td>9 - 3; 8 * 2; </td>
+                    </tr>
+                    <tr>
+                        <td>Assignment</td>
+                        <td>As you've seen already: this assigns a value to a variable.</td>
+                        <td class="symbol"><code>=</code></td>
+                        <td><code>let myVariable = 'Bob';</code></td>
+                    </tr>
+                    <tr>
+                        <td>Strict equality</td>
+                        <td>This performs a test to see if two values are equal. It returns a <code>true</code>/<code>false</code> (Boolean) result.</td>
+                        <td class="symbol"><code>===</code></td>
+                        <td><code>let myVariable = 3;<br/>myVariable === 4;</code></td>
+                    </tr>
+                    <tr>
+                        <td>Not, Does-not-equal</td>
+                        <td>This returns the logically opposite value of what it precedes. It turns a true into a false, etc.. When it is used alongside the Equality operator, the negation operator tests whether two values are not equal.</td>
+                        <td class="symbol"><code>!</code>, <code>!==</code></td>
+                        <td>For "Not", the basic expression is true, but the comparison returns false because we negate it:<br/><br/><code>let myVariable = 3;<br/>!(myVariable === 3);</code><br/><br/>"Does-not-equal" gives basically the same result with different syntax. Here we are testing "is <code>myVariable</code> NOT equal to 3". This returns <code>false</code> because <code>myVariable</code> IS equal to 3:
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>There are a lot more operators to explore, but this is enough for now. See Expressions and operators for a complete list.</p>
+        <h1>Conditionals</h1>
+        <p>Conditionals are code structures used to test if an expression returns true or not. A very common form of conditionals is the if...else statement. For example:</p>
+        <code class="code-big">let iceCream = 'chocolate';<br/>
+            if(iceCream === 'chocolate') {<br/>
+              alert('Yay, I love chocolate ice cream!');<br/>
+            } else {<br/>
+              alert('Awwww, but chocolate is my favorite…');<br/>
+            }</code>
+        <p>The expression inside the <code>if()</code> is the test. This uses the strict equality operator (as described above) to compare the variable <code>iceCream</code> with the string <code>chocolate</code> to see if the two are equal. If this comparison returns <code>true</code>, the first block of code runs. If the comparison is not true, the second block of code—after the <code>else</code> statement—runs instead.</p>
+        <h1>Functions</h1>
+        <p>Functions are a way of packaging functionality that you wish to reuse. It's possible to define a body of code as a function that executes when you call the function name in your code. This is a good alternative to repeatedly writing the same code. You have already seen some uses of functions. For example:</p>
+        <code class="code-big">let myVariable = document.querySelector('h1');</code><br/>
+        <code class="code-big">alert('hello!');</code><br/>
+        <p>These functions, <code>document.querySelector</code> and <code>alert</code>, are built into the browser.</p>
+        <p>If you see something which looks like a variable name, but it's followed by parentheses— <code>()</code> —it is likely a function. Functions often take arguments: bits of data they need to do their job. Arguments go inside the parentheses, separated by commas if there is more than one argument.</p>
+        <p>For example, the <code>alert()</code> function makes a pop-up box appear inside the browser window, but we need to give it a string as an argument to tell the function what message to display.</p>
+        <p>You can also define your own functions. In the next example, we create a simple function which takes two numbers as arguments and multiplies them:</p>
+        <code class="code-big">function multiply(num1,num2) {<br/>
+            let result = num1 * num2;<br/>
+            return result;<br/>
+          }</code>
+        <p>Try running this in the console; then test with several arguments. For example:</p>
+        <code class="code-big">multiply(4, 7);<br/>
+            multiply(20, 20);<br/>
+            multiply(0.5, 3);</code>
+        <h1>Events</h1>
+        <p>Real interactivity on a website requires event handlers. These are code structures that listen for activity in the browser, and run code in response. The most obvious example is handling the click event, which is fired by the browser when you click on something with your mouse. To demonstrate this, enter the following into your console, then click on the current webpage:</p>
+        <code class="code-big">document.querySelector('html').addEventListener('click', function() {<br/>
+            alert('Ouch! Stop poking me!');<br/>
+          });</code>
+        <p>There are many ways to attach an event handler to an element. Here we select the <code>< html ></code> element. We then call its <code>addEventListener()</code> function, passing in the name of the event to listen to (<code>'click'</code>) and a function to run when the event happens.</p>
+        <p>Note that</p>
+        <code class="code-big">document.querySelector('html').addEventListener('click', function() {<br/>
+            alert('Ouch! Stop poking me!');<br/>
+          });</code>
+        <p>is equivalent to</p>
+        <code class="code-big">let myHTML = document.querySelector('html');<br/>
+            myHTML.addEventListener('click', function() {<br/>
+              alert('Ouch! Stop poking me!');<br/>
+            });</code>
+        <p>It's just shorter.</p>
+        <p>The functions we just passed to <code>addEventListener()</code> here are called <i>anonymous functions</i>, because they don't have a name. There's an alternative way of writing anonymous functions, which we call an <i>arrow function</i>. An arrow function uses <code>() =></code> instead of <code>function ()</code>:</p>
+        <code class="code-big">document.querySelector('html').addEventListener('click', () => {<br/>
+            alert('Ouch! Stop poking me!');<br/>
+          });<br/></code>
+        </article>
+    </section>
+
+    <section class="main-section" id="Supercharging_our_Website">
+        <article>
+            <header>Supercharging our Website</header>
+            <p>With this review of JavaScript basics completed (above), let's add some new features to our example site.</p>
+            <p>Before going any further, delete the current contents of your <code>main.js</code> file — the bit you added earlier during the "Hello world!" example — and save the empty file. If you don't, the existing code will clash with the new code you are about to add.</p>
+            <h1>Adding an image changer</h1>
+            <p>In this section, you will learn how to use JavaScript and DOM API features to alternate the display of one of two images. This change will happen as a user clicks the displayed image.</p>
+            <ol>
+                <li>Choose an image you want to feature on your example site. Ideally, the image will be the same size as the image you added previously, or as close as possible.</li>
+                <li>Save this image in your <code>images</code> folder</li>
+                <li>Rename the image <i>firefox2.png</i>.</li>
+                <li>Add the following JavaScript code to your <code>main.js</code> file</li>
+                <code class="code-big">let myImage = document.querySelector('img');<br/>
+                    myImage.onclick = function() {<br/>
+                        let mySrc = myImage.getAttribute('src');<br/>
+                        if(mySrc === 'images/firefox-icon.png') {<br/>
+                          myImage.setAttribute('src','images/firefox2.png');<br/>
+                        } else {<br/>
+                          myImage.setAttribute('src','images/firefox-icon.png');<br/>
+                        }<br/>
+                    }</code>
+                <li>Save all files and load <code>index.html</code> in the browser. Now when you click the image, it should change to the other one.</li>       
+            </ol>
+            <p>This is what happened. You stored a reference to your <code>< img > </code> element in the <code>myImage</code> variable. Next, you made this variable's <code>onclick</code> event handler property equal to a function with no name (an "anonymous" function). So every time this element is clicked:</p>
+            <ol>
+                <li>The code retrieves the value of the image's <code>src</code> attribute</li>
+                <li>The code uses a conditional to check if the src value is equal to the path of the original image:
+                    <ol type="a">
+                        <li>If it is, the code changes the <code>src</code> value to the path of the second image, forcing the other image to be loaded inside the <code>< img ></code> element.</li>
+                        <li>If it isn't (meaning it must already have changed), the <code>src</code> value swaps back to the original image path, to the original state.</li>
+                    </ol>
+                </li>
+            </ol>
+            <h1>Adding a personalized welcome message</h1>
+            <p>Next, let's change the page title to a personalized welcome message when the user first visits the site. This welcome message will persist. Should the user leave the site and return later, we will save the message using the Web Storage API. We will also include an option to change the user, and therefore, the welcome message.</p>
+            <ol>
+                <li>In <code>index.html</code>, add the following line just before the <code>script</code>element:</li><br/>
+                <code class="code-big"> (button) Change user (/button) </code>
+                <li>In <code>main.js</code>, place the following code at the bottom of the file, exactly as it is written. This takes references to the new button and the heading, storing each inside variables:</li><br/>
+                <code class="code-big">let myButton = document.querySelector('button');<br/>let myHeading = document.querySelector('h1');</code>
+                <li>Add the following function to set the personalized greeting. This won't do anything yet, but this will change soon.</li><br/>
+                <code class="code-big">function setUserName() <br/>
+                    let myName = prompt('Please enter your name.');<br/>
+                    localStorage.setItem('name', myName);<br/>
+                    myHeading.textContent = 'Mozilla is cool, ' + myName;<br/>
+                  }<br/></code>
+                <p>The <code>setUserName()</code> function contains a <code>prompt()</code> function, which displays a dialog box, similar to <code>alert()</code>. This <code>prompt()</code> function does more than <code>alert()</code>, asking the user to enter data, and storing it in a variable after the user clicks <i>OK</i>. In this case, we are asking the user to enter a name. Next, the code calls on an API <code>localStorage</code>, which allows us to store data in the browser and retrieve it later. We use localStorage's <code>setItem()</code> function to create and store a data item called <code>'name'</code>, setting its value to the <code>myName</code> variable which contains the user's entry for the name. Finally, we set the <code>textContent</code> of the heading to a string, plus the user's newly stored name.</p>
+                <li>Add the following condition block. We could call this initialization code, as it structures the app when it first loads.</li><br/>
+                <code class="code-big">if(!localStorage.getItem('name')) {<br/>
+                    setUserName();<br/>
+                  } else {<br/>
+                    let storedName = localStorage.getItem('name');<br/>
+                    myHeading.textContent = 'Mozilla is cool, ' + storedName;<br/>
+                  }<br/></code>
+                <p>This first line of this block uses the negation operator (logical NOT, represented by the <code>!</code>) to check whether the <code>name</code> data exists. If not, the <code>setUserName()</code> function runs to create it. If it exists (that is, the user set a user name during a previous visit), we retrieve the stored name using <code>getItem()</code> and set the <code>textContent</code> of the heading to a string, plus the user's name, as we did inside <code>setUserName()</code>.</p>
+                <li>Put this <code>onclick</code> event handler (below) on the button. When clicked, <code>setUserName()</code> runs. This allows the user to enter a different name by pressing the button.</li><br/>
+                <code class="code-big">myButton.onclick = function() {<br/>
+                    setUserName();<br/>
+                  }<br/></code>
+            </ol>
+            <h1>A user name of null?</h1>
+            <p>When you run the example and get the dialog box that prompts you to enter your user name, try pressing the <i>Cancel</i> button. You should end up with a title that reads <i>Mozilla is cool, null</i>. This happens because—when you cancel the prompt—the value is set as null. Null is a special value in JavaScript that refers to the absence of a value.</p>
+            <p>Also, try clicking <i>OK</i> without entering a name. You should end up with a title that reads <i>Mozilla is cool</i>, for fairly obvious reasons.</p>
+            <p>To avoid these problems, you could check that the user hasn't entered a blank name. Update your <code>setUserName()</code> function to this:</p>
+            <code class="code-big">
+                function setUserName() {<br/>
+                    let myName = prompt('Please enter your name.');<br/>
+                    if(!myName) {<br/>
+                      setUserName();<br/>
+                    } else {<br/>
+                      localStorage.setItem('name', myName);<br/>
+                      myHeading.textContent = 'Mozilla is cool, ' + myName;<br/>
+                    }<br/>
+                  }<br/>
+            </code>
+            <p>In human language, this means: If <code>myName</code> has no value, run <code>setUserName()</code> again from the start. If it does have a value (if the above statement is not true), then store the value in <code>localStorage</code> and set it as the heading's text.</p>
+        </article>
+    </section>
+
+    <section class="main-section" id="Conclusion">
+        <article>
+            <header>Conclusion</header>
+            <p>If you have followed all the instructions in this article, you should end up with a page that looks something like the image below. You can also view <a class="hello-world" href="https://mdn.github.io/beginner-html-site-scripted/">here.</a></p>
+        </article>
+    </section>
+    </main>
+</body>
+  </html>
